@@ -1,0 +1,19 @@
+{
+  "name": "www-rusty-mines",
+  "version": "0.1.0",
+  "description": "play minesweeper in your browser through the magic of rust+wasm",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "rust-mines": "file://../pkg"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "copy-webpack-plugin": "^5.0.0"
+  }
+}
