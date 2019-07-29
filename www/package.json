@@ -8,7 +8,7 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
-    "rust-mines": "file://../pkg"
+    "rusty-mines": "file://../pkg"
   },
   "devDependencies": {
     "webpack": "^4.29.3",
