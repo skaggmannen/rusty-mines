@@ -5,7 +5,6 @@
 # Rust files
 /target
 **/*.rs.bk
-Cargo.lock
 
 # Wasm-pack files
 bin/
