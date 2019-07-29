@@ -1,0 +1,13 @@
+# InelliJ files
+.idea/
+*.iml
+
+# Rust files
+/target
+**/*.rs.bk
+Cargo.lock
+
+# Wasm-pack files
+bin/
+pkg/
+wasm-pack.log
