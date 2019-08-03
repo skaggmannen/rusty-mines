@@ -77,7 +77,6 @@ canvas.addEventListener("contextmenu", event => {
 
 const render = () => {
     const ctx = canvas.getContext("2d");
-    ctx.font = "20px Courier New";
 
     if (board.done()) {
         done.innerText = "Done!";
@@ -127,12 +126,14 @@ const drawCells = (ctx) => {
                 ctx.fillStyle = "#000000";
 
                 if (cell.mine) {
-                    ctx.fillText("X", x+5, y+17);
+                    ctx.font = "12px Courier New";
+                    ctx.fillText("💣", x+4, y+15);
                 } else {
                     const count = cell.neighbors;
                     ctx.fillStyle = COUNT_COLORS[count - 1];
+                    ctx.font = "20px Courier New";
                     if (count > 0) {
-                        ctx.fillText("" + count, x+5, y+17);
+                        ctx.fillText("" + count, x+4, y+17);
                     }
                 }
             } else {
@@ -145,8 +146,9 @@ const drawCells = (ctx) => {
                 );
 
                 if (cell.flagged) {
+                    ctx.font = "12px Courier New";
                     ctx.fillStyle = "#000000";
-                    ctx.fillText("F", x+5, y+17);
+                    ctx.fillText("🚩", x+4, y+15);
                 }
             }
         }
